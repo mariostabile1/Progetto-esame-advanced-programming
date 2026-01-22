@@ -10,7 +10,7 @@ Studente: Mario Stabile 715424
 # Installazione
 
 La web app è già buildata, in `AI-Web-Face-Detector/dist` dove sonp presenti già tutti gli asset e i file per avviarla e basta,
-ma se si volesse comunque re-buildare basta andare su AI-Web-Face-Detector/ e scrivere `npm run build`
+ma se si volesse comunque re-buildare basta andare su `AI-Face-Detector/` e scrivere `npm run build`
 
 # Utilizzo
 
