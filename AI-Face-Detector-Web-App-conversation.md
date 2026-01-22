@@ -2,7 +2,7 @@
 
 Note: _This is purely the output of the chat conversation and does not contain any raw data, codebase snippets, etc. used to generate the output._
 
-### User Input
+## User Input
 
 Project Title: AI-Assisted Face Detector Web Application
 
@@ -33,7 +33,7 @@ Features:
 - some statistics
 
 Ask me any questions you may have.
-
+```
 *Listed directory [AI-Web-Face-Detector-V2](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2) *
 
 *Searched filesystem*
@@ -43,10 +43,6 @@ Ask me any questions you may have.
 *Edited relevant file*
 
 *Edited relevant file*
-
-### User Input
-
-
 
 *Edited relevant file*
 
@@ -93,13 +89,15 @@ Ask me any questions you may have.
 *Edited relevant file*
 
 *User accepted the command `npm run dev`*
+```
 
-### User Input
+## User Input
 
 I have notice that the bounding box label are mirrored and are painted with a color that is difficult to see.
 mirror back the label on the bounding box and add in the top center what the % value mean
 than change the bounding box color to something still visible but also more readable
 
+```
 *Viewed [Renderer.js](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/src/ui/Renderer.js) *
 
 *Edited relevant file*
@@ -113,16 +111,19 @@ than change the bounding box color to something still visible but also more read
 *Edited relevant file*
 
 *User accepted the command `npm run dev`*
+```
 
-### User Input
+## User Input
 
 Answer me some questions: the vision model run on cpu or gpu? and if it runs on gpu, it can anyway work on every laptop?
 
+```
 *Viewed [Detector.js](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/src/core/Detector.js) *
 
 *Viewed [main.js](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/src/main.js) *
+```
 
-### Planner Response
+## Planner Response
 
 Based on the current implementation in [src/core/Detector.js](cci:7://file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/src/core/Detector.js:0:0-0:0), here are the answers to your questions:
 
@@ -139,17 +140,15 @@ The code explicitly sets `delegate: 'GPU'` when initializing the `FaceDetector`.
 **Recommendation:**
 If you want to guarantee 100% reliability even on problematic hardware, we could add a **fallback mechanism**: try to initialize with GPU first, and if that fails, automatically restart with CPU. Would you like me to implement this fallback logic?
 
-*Edited relevant file*
-
-*Edited relevant file*
-
-### User Input
+## User Input
 
 i want you to implement bundling for this projetc with webpack, ask me what to bundle and what not before doing it
 
+```
 *Viewed [package.json](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/package.json) *
+```
 
-### Planner Response
+## Planner Response
 
 To switch from Vite to Webpack, we need to decide how to handle the assets.
 
@@ -164,10 +163,11 @@ Here is what we can bundle:
 
 **Which option do you prefer for the Heavy Assets (Option A or B)?**
 
-### User Input
+## User Input
 
 include 1, 2 and 3 with option B and exclude for bundle every .pdf .typ .txt .md .png files
 
+```
 *Edited relevant file*
 
 *User accepted the command `npm install --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader html-webpack-plugin copy-webpack-plugin clean-webpack-plugin`*
@@ -197,18 +197,19 @@ include 1, 2 and 3 with option B and exclude for bundle every .pdf .typ .txt .md
 *User accepted the command `ls`*
 
 *User accepted the command `pwd`*
+```
 
-### User Input
+## User Input
 
 show me how to use the builded production version
 
-### Planner Response
+## Planner Response
 
 To run the production version you just built in the `dist/` folder, you need to serve it with a web server. You cannot simply double-click [index.html](cci:7://file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/index.html:0:0-0:0) because of browser security restrictions (CORS) regarding camera access and loading WASM files.
 
 Here are a few ways to run it:
 
-### Option 1: Python (easiest, built-in)
+#### Option 1: Python (easiest, built-in)
 Since you are on Linux, you likely have Python installed.
 ```bash
 cd dist
@@ -216,30 +217,32 @@ python3 -m http.server 8000
 ```
 Then open `http://localhost:8000` in your browser.
 
-### Option 2: `serve` (Node.js)
+#### Option 2: `serve` (Node.js)
 You can use the `serve` utility directly with `npx`:
 ```bash
 npx serve dist
 ```
 
-### Option 3: VS Code "Live Server"
+#### Option 3: VS Code "Live Server"
 If you use VS Code, right-click [dist/index.html](cci:7://file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/dist/index.html:0:0-0:0) and select **"Open with Live Server"**.
 
 I will update the **Walkthrough** artifact to include these instructions so you don't forget them.
 
 (I'll update the artifacts now).
 
-*Edited relevant file*
+`*Edited relevant file*`
 
-### User Input
+## User Input
 
 i tried opening index.html in browser but model isn't loading
 
+```
 *Viewed [Detector.js](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/src/core/Detector.js) *
 
 *Viewed [webpack.config.cjs](file:///home/mario/Desktop/Unipi/Magistrale/advanced-programming/Progetto-esame/AI-Web-Face-Detector-V2/webpack.config.cjs) *
+```
 
-### Planner Response
+## Planner Response
 
 The issue is that modern browsers **block** loading external resources like WASM files or performing `fetch` requests when you open a file directly (double-clicking, which uses the `file://` protocol). This is a strict security policy (CORS).
 
@@ -255,4 +258,4 @@ python3 -m http.server 8000
 Then, open your browser to:
 **[http://localhost:8000](http://localhost:8000)**
 
-This will work because `http://localhost` is treated as a secure origin, whereas `file://` is not.
+This will work because `http://localhost` is treated as a secure origin, whereas `file://` is not.  
