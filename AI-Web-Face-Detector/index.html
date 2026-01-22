@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Face Detector</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>AI Face Detector</h1>
+      </header>
+      
+      <main class="app-content">
+        <aside class="sidebar">
+          <div class="panel control-panel">
+            <h2>Controls</h2>
+            <button id="toggle-detection" class="btn primary">Enable Detection</button>
+            <button id="screenshot-btn" class="btn secondary">Take Screenshot</button>
+          </div>
+          
+          <div class="panel stats-panel">
+            <h2>Statistics</h2>
+            <div class="stat-item">
+              <span class="label">Status:</span>
+              <span id="status-display" class="value">Ready</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">FPS:</span>
+              <span id="fps-display" class="value">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="label">Faces:</span>
+              <span id="face-count-display" class="value">0</span>
+            </div>
+          </div>
+        </aside>
+        
+        <section class="viewport">
+          <div class="video-container">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="output-canvas"></canvas>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

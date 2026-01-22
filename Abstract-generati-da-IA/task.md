@@ -1,0 +1,24 @@
+# Tasks
+
+- [x] Initialize Vite Project with Vanilla JS
+- [x] Implement Basic UI Layout (Header, Sidebar, Main Area)
+- [x] Apply Dark Theme and Styling (CSS)
+- [x] Implement Camera Feed Integration
+- [x] Integrate MediaPipe Face Detector
+    - [x] Setup FilesetResolver and FaceDetector
+    - [x] Real-time detection loop
+- [x] Implement Bounding Box Drawing on Canvas
+- [x] Add Application Features
+    - [x] Toggle Face Detection logic
+    - [x] Screenshot functionality
+    - [x] Statistics Display (FPS, Face Count)
+- [x] Verification and Polish
+    - [x] Cross-browser check (Chrome/Firefox)
+    - [x] Performance optimization
+    - [x] Code cleanup
+- [x] Migrate to Webpack
+    - [x] Install Webpack and loaders
+    - [x] Download offline assets (TFLite model)
+    - [x] Configure Webpack (Bundle JS/CSS/Assets, Exclude docs)
+    - [x] Refactor Code for local assets
+    - [x] Verify Build
